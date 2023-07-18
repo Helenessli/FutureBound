@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('criteria');
             $table->date('deadline');
             $table->string('url');
-            $table->date('created at');
-            $table->date('updated at');
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 

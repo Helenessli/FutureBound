@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('scholarship_tag', function (Blueprint $table) {
-            $table->integer('scholarship id');
-            $table->integer('tag id');
+            $table->integer('scholarship_id');
+            $table->integer('tag_id');
         });
     }
 

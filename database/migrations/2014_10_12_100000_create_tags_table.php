@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('created at');
-            $table->date('updated at');
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 
