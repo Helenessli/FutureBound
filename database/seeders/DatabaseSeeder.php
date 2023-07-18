@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
             'criteria' => 'Applicants must be Involved & devoted to the game but does not have to be an active player; involved in helping expand the game of rugby in inner cities, first nation reserves, small towns, immigrant communities; currently involved in the sport. Criteria: contributions to the rugby community, how you have helped expand the game, other volunteer activities, academic achievements, most important accomplishments, future goals',
             'deadline' => '2023-09-01',
             'url' => 'https://canadianrugbyfoundation.ca/index.php/support-a-fund/scholarship/george-f-jones/',
-            'created_at' => '2023-07-01',
-            'updated_at' => '2023-07-01'
+            'created_at' => '2023-07-18',
+            'updated_at' => '2023-07-18'
          ]);
         
         /* example: \App\Models\Scholarship::factory(10)->create();
