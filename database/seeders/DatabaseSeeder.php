@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'updated_at' => '2023-07-01'
          ]);
         
-        /*\App\Models\Scholarship::factory(10)->create();
+        /* example: \App\Models\Scholarship::factory(10)->create();
 
          \App\Models\Scholarship::factory()->create([
              'name' => 'Test User',
