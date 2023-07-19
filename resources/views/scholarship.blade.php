@@ -5,7 +5,7 @@
 
 <body>
         <article>
-                <?= $post; ?>
+                <?= $scholarship; ?>
         </article>
 
         <a href="/">Go Back</a>
