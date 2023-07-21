@@ -5,9 +5,15 @@
 </head>
 
 <body>
-    This is Navigation.
+    <header>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="#">Scholarships</a></li>
+                <li><a href="#">Add</a></li>
+            </ul>
+        </nav>
+    </header>
     @yield('section') 
-        
-</body>
+ 
 
 </html>
