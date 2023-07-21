@@ -7,7 +7,7 @@
 <body>
     This is navigation. 
     @yield('section') 
-        
+        HELLO
         
 </body>
 
