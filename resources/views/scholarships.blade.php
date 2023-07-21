@@ -1,13 +1,9 @@
-<!doctype html>
-
-<title>Scholarships</title>
-<link rel="stylesheet" href="/app.css">
-
-<body>
-        <?php foreach ($scholarships as $scholarship) : ?>
+@extends('layout.app')
+@section('section')
+        <?php foreach ($scholarships as $scholarship) : ?> 
                 <article>
                        <h1> 
-                                <a href="/scholarships/<?=$scholarship->slug; ?>">
+                                <a href="/scholarships/<?=$scholarship->id; ?>">
                                         <?= $scholarship->name; ?>
                                 </a>
                         </h1>
@@ -17,6 +13,4 @@
                         </div>
                 </article>
         <?php endforeach; ?>
-
-
-</body>
+@endSection

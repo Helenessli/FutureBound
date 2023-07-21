@@ -1,9 +1,5 @@
-<!doctype html>
-
-<title>Scholarships</title>
-<link rel="stylesheet" href="/app.css">
-
-<body>
+@extends('layout.app')
+@section('section')
         <article>
                 <h1><?= $scholarship->name; ?></h1>
 
@@ -13,4 +9,4 @@
         </article>
 
         <a href="/">Go Back</a>
-</body>
+@endSection

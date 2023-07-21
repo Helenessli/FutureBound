@@ -6,7 +6,7 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 
 Route::get('/', function () {
-    $scholarships = Scholarship::alll();
+    $scholarships = Scholarship::all();
 
     return view('scholarships', [
         'scholarships' => $scholarships
@@ -14,13 +14,13 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('scholarships/{scholarship}', function($slug) {
+Route::get('scholarships/{scholarship}', function($id) {
 
     return view('scholarship', [
-        'scholarship' => Scholarship::find($slug)
+        'scholarship' => Scholarship::findOrFail($id)
     ]);
 
-})->where('scholarship', '[a-z_\-0-9A-Z]+');
+})->where('scholarship', '[0-9]+');
 
 
 
