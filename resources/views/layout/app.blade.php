@@ -5,9 +5,8 @@
 </head>
 
 <body>
-    This is navigation. 
+    This is Navigation.
     @yield('section') 
-        
         
 </body>
 
