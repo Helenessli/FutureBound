@@ -7,10 +7,16 @@
                                         <?= $scholarship->name; ?>
                                 </a>
                         </h1>
-
                         <div>
-                                <?= $scholarship->criteria; ?>
+                                Amount: <?=$scholarship->amount; ?>
                         </div>
+                        <div>
+                                Deadline: <?=$scholarship->deadline; ?>
+                        </div>
+                        <div>
+                                Criteria: <?=$scholarship->criteria; ?>
+                        </div>
+
                 </article>
         <?php endforeach; ?>
 @endSection

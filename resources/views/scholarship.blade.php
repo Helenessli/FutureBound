@@ -4,9 +4,15 @@
                 <h1><?= $scholarship->name; ?></h1>
 
                 <div>
-                        <?= $scholarship->deadline; ?>
+                        Amount: <?=$scholarship->amount; ?>
+                </div>
+                <div>
+                        Deadline: <?=$scholarship->deadline; ?>
+                </div>
+                <div>
+                        Criteria: <?=$scholarship->criteria; ?>
                 </div>
         </article>
 
-        <a href="/">Go Back</a>
+        <a href="/"><br>Go Back</a>
 @endSection

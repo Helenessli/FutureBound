@@ -32,11 +32,11 @@ class DatabaseSeeder extends Seeder
             'created_at' => '2023-07-21',
             'updated_at' => '2023-07-21'
          ]);
-          
+
         Scholarship::create([
             'name' => 'George F. Jones Scholarship',
             'amount' => 'not identified',
-            'criteria' => 'Applicants must be Involved & devoted to the game but does not have to be an active player; involved in helping expand the game of rugby in inner cities, first nation reserves, small towns, immigrant communities; currently involved in the sport. Criteria: contributions to the rugby community, how you have helped expand the game, other volunteer activities, academic achievements, most important accomplishments, future goals',
+            'criteria' => 'Applicants must be Involved & devoted to the game but does not have to be an active player; involved in helping expand the game of rugby in inner cities, first nation reserves, small towns, immigrant communities; currently involved in the sport. Contributions to the rugby community, how you have helped expand the game, other volunteer activities, academic achievements, most important accomplishments, future goals',
             'deadline' => '2023-09-01',
             'url' => 'https://canadianrugbyfoundation.ca/index.php/support-a-fund/scholarship/george-f-jones/',
             'created_at' => '2023-07-18',
@@ -46,7 +46,7 @@ class DatabaseSeeder extends Seeder
          Scholarship::create([
             'name' => 'Thomas Family Scholarship',
             'amount' => 'not identified',
-            'criteria' => 'Applicants must be currently playing rugby in Canada; 17 to 21 years of age; enrolled at a Canadian college or university for the coming academic year. Criteria: actively playing the sport & demonstrating they plan on staying active in the game; strong academic achievement; recognized contribution to local & rugby communities',
+            'criteria' => 'Applicants must be currently playing rugby in Canada; 17 to 21 years of age; enrolled at a Canadian college or university for the coming academic year. Actively playing the sport & demonstrating they plan on staying active in the game; strong academic achievement; recognized contribution to local & rugby communities',
             'deadline' => '2023-09-01',
             'url' => 'https://canadianrugbyfoundation.ca/index.php/support-a-fund/scholarship/thomas-family/',
             'created_at' => '2023-07-21',
