@@ -15,3 +15,12 @@ article + article {
     padding-top: 3rem;
     border-top: 1px solid #c5c5c5;
 }
+
+.nav__links {
+    list-style: none;
+}
+.nav__links li {
+    display: inline-block;
+    padding: 0px 90px;
+}
+
