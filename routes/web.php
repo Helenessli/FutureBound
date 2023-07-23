@@ -22,5 +22,10 @@ Route::get('scholarships/{scholarship}', function($id) {
 
 })->where('scholarship', '[0-9]+');
 
+Route::get('add', function () {
+
+    return view('add');
+});
+
 
 
