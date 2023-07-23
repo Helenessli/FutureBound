@@ -13,6 +13,9 @@
                         Criteria: <?=$scholarship->criteria; ?>
                 </div>
         </article>
-
-        <a href="/"><br>Go Back</a>
+        <br>
+        <a href="<?=$scholarship->url; ?>">
+                <button>Official Page</button>
+        </a>
+        <br>
 @endSection
