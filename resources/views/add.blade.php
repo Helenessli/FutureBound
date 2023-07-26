@@ -3,8 +3,12 @@
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:pw-6 lg:px-8">
+        @if(session('flash'))
+        <p>{{ session('flash') }}</p>
+        @endif
         <h1>Add a Scholarship</h1>
-        <form method="POST">
+        <form method="POST" action="/add">
+            @csrf
             <label for="name">Name:</label>
             <div>
                 <textarea id="name" name="name"></textarea>

@@ -27,5 +27,17 @@ Route::get('add', function () {
     return view('add');
 });
 
+Route::post('add', function () {
+    
+    $data = request(['name', 'amount', 'criteria', 'deadline', 'url']);
+
+    \Illuminate\Support\Facades\Mail::to(users:'hliformsubmission@gmail.com')
+    ->send(new \App\Mail\ScholarshipSubmission($data));
+
+    return redirect(to:'add')
+    ->with('flash', 'Form Submitted Successfully');
+});
+
+
 
 
