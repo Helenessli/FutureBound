@@ -15,8 +15,8 @@
                 </div>
         </article>
         <br>
-        <a href="<?=$scholarship->url; ?>">
-                <button>Official Page</button>
+        <a href="<?=$scholarship->url; ?>" class="btn">
+                Official Page
         </a>
         <br>
 </main>

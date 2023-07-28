@@ -56,6 +56,24 @@ body {
     line-height: 1.6;
 }
 
+.btn {
+    display:inline-block;
+    padding: 8px 25px;
+    background: #f1850c;
+    border: 2px solid #f1850c;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 15px;
+    text-decoration: none !important;
+    font-weight: 400;
+    transition: .5s;
+    color: white;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #f1850c;
+}
 article + article {
     margin-top: 3rem;
     padding-top: 3rem;
