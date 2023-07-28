@@ -64,7 +64,7 @@ body {
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     font-size: 15px;
-    text-decoration: none !important;
+    text-decoration: none;
     font-weight: 400;
     color: white;
 }
@@ -102,4 +102,75 @@ main h1{
 
 .scholarships-h1 a:hover{ 
     color: #f1850c;
+}
+
+/* form */
+.formBox {
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox
+{
+    width: 100%;
+}
+
+.inputBox span{
+    color:#f1850c;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9em;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.inputBox textarea {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9em;
+    outline: none;
+    border: 1px solid #333;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"] {
+    display:inline-block;
+    padding: 8px 25px;
+    background: #f1850c;
+    border: 2px solid #f1850c;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    max-width: 120px;
+}
+
+.inputBox input[type="submit"]:hover{
+    background: transparent;
+    color: #f1850c;
+}
+
+.inputBox ::placeholder{
+    color: #999;
 }
