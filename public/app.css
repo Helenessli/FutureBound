@@ -74,6 +74,7 @@ body {
     background: transparent;
     color: #f1850c;
 }
+
 article + article {
     margin-top: 3rem;
     padding-top: 3rem;
@@ -95,16 +96,11 @@ main h1{
     font-size: 21px;
 }
 
-.scholarships-h1{ /* does not work */
-    text-decoration: none !important;
+.scholarships-h1 a{ 
+    text-decoration: none ;
+    color: black;
 }
 
-.scholarships-h1 :hover{ /* does not work */
+.scholarships-h1 a:hover{ 
     color: #f1850c;
 }
-
-/*a,
-a:link,
-a:visited {
-  text-decoration: none !important;
-}*/
