@@ -1,13 +1,77 @@
-body {
-    background: white;
-    color: black;
-    max-width: 600px;
-    margin: auto;
-    font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding:0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-p {
+body {
+    background: white;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.social-media {
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 30px;
+}
+
+.navbar a:hover {
+    color: #f1850c;
+}
+
+.scholarships body{
+    max-width: 600px;
+    margin: auto;
+}
+
+.scholarships p {
     line-height: 1.6;
+}
+
+.btn {
+    display:inline-block;
+    padding: 8px 25px;
+    background: #f1850c;
+    border: 2px solid #f1850c;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #f1850c;
 }
 
 article + article {
@@ -16,11 +80,97 @@ article + article {
     border-top: 1px solid #c5c5c5;
 }
 
-.nav__links {
-    list-style: none;
-}
-.nav__links li {
-    display: inline-block;
-    padding: 0px 85px;
+main {
+    padding-top: 100px; /* Adjust the value as needed based on your header's height */
+    padding-left: 112px; /* Add left padding */
+    padding-right: 112px; /* Add right padding */
 }
 
+
+main article{
+    font-size: 16px;
+}
+
+main h1{
+    font-size: 21px;
+}
+
+.scholarships-h1 a{ 
+    text-decoration: none ;
+    color: black;
+}
+
+.scholarships-h1 a:hover{ 
+    color: #f1850c;
+}
+
+/* form */
+.formBox {
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox
+{
+    width: 100%;
+}
+
+.inputBox span{
+    color:#f1850c;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9em;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.inputBox textarea {
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9em;
+    outline: none;
+    border: 1px solid #333;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"] {
+    display:inline-block;
+    padding: 8px 25px;
+    background: #f1850c;
+    border: 2px solid #f1850c;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    max-width: 120px;
+}
+
+.inputBox input[type="submit"]:hover{
+    background: transparent;
+    color: #f1850c;
+}
+
+.inputBox ::placeholder{
+    color: #999;
+}

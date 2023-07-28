@@ -2,42 +2,52 @@
 @section('section')
 
 <main>
-    <div class="mx-auto max-w-7xl py-6 sm:pw-6 lg:px-8">
-        @if(session('flash'))
-        <p>{{ session('flash') }}</p>
-        @endif
-        <h1>Add a Scholarship</h1>
-        <form method="POST" action="/add">
-            @csrf
-            <label for="name">Name:</label>
-            <div>
-                <textarea id="name" name="name"></textarea>
+<div class="scholarship form">
+    @if(session('flash'))
+    <p>{{ session('flash') }}</p>
+    @endif
+    <h3>Add a Scholarship</h3><br>
+    <form method="POST">
+    @csrf
+        <div class="formBox">
+            <div class="row50">
+                <div class="inputBox">
+                    <span>Name</span>
+                    <input id= "name" name="name" type="text" placeholder="Fullbright Scholarship">
+                </div>
+                <div class="inputBox">
+                    <span>Amount</span>
+                    <input id= "amount" name="amount" type="text" placeholder="$1000">
+                </div>
             </div>
 
-            <label for="amount">Amount:</label>
-            <div>
-                <textarea id="amount" name="amount"></textarea>
+            <div class="row50">
+                <div class="inputBox">
+                    <span>Deadline</span>
+                    <input id= "deadline" name="deadline" type="text" placeholder="Jan 1, 2023">
+                </div>
+                <div class="inputBox">
+                    <span>URL</span>
+                    <input id= "url" name="url" type="text" placeholder="www.fullbright.com">
+                </div>
             </div>
 
-            <label for="criteria">Criteria:</label>
-            <div>
-                <textarea id="criteria" name="criteria"></textarea>
+            <div class="row100">
+                <div class="inputBox">
+                    <span>Criteria</span>
+                    <textarea placeholder="Elibigility, special requirements, etc..." id="criteria" name="criteria"></textarea>
+                </div>
             </div>
 
-            <label for="deadline">Deadline:</label>
-            <div>
-                <textarea id="deadline" name="deadline"></textarea>
+            <div class="row100">
+                <div class="inputBox">
+                    <input type="submit" value="Send">
+                </div>
             </div>
+        </div>
 
-            <label for="url">URL:</label>
-            <div>
-                <textarea id="url" name="url"></textarea>
-            </div>
-
-            <p>
-                <button type="submit">Submit</button>
-            </p>
-        </form>
-    </div>
+           
+    </form>
+</div>
 </main>
 @endSection

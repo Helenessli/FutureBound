@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('section')
+<main>
         <article>
                 <h1><?= $scholarship->name; ?></h1>
 
@@ -14,8 +15,9 @@
                 </div>
         </article>
         <br>
-        <a href="<?=$scholarship->url; ?>">
-                <button>Official Page</button>
+        <a href="<?=$scholarship->url; ?>" class="btn">
+                Official Page
         </a>
         <br>
+</main>
 @endSection
