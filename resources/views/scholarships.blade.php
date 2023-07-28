@@ -17,7 +17,9 @@
                         <div>
                                 Criteria: <?=$scholarship->criteria; ?>
                         </div>
-
+                        <br><a href="/scholarships/<?=$scholarship->id; ?>" class="btn">
+                        Learn More
+                        </a>
                 </article>
         <?php endforeach; ?>
 </main>
