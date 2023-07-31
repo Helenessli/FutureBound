@@ -41,7 +41,7 @@
 
             <div class="row100">
                 <div class="inputBox">
-                    <input type="submit" value="Send">
+                    <input type="submit" value="Submit">
                 </div>
             </div>
         </div>
