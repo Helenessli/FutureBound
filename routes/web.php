@@ -35,7 +35,7 @@ Route::post('add', function () {
     ->send(new \App\Mail\ScholarshipSubmission($data));
 
     return redirect(to:'add')
-    ->with('flash', 'Form Submitted Successfully');
+    ->with('flash', 'Form Submitted Successfully. The submission is under review.');
 });
 
 
