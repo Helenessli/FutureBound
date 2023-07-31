@@ -5,6 +5,8 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Scholarship;
+use App\Models\Tag;
+use App\Models\scholarship_tag;
 
 class DatabaseSeeder extends Seeder
 {
@@ -93,6 +95,61 @@ class DatabaseSeeder extends Seeder
             'updated_at' => '2023-07-21'
          ]);
 
+         Tag::create([
+            'name' => 'High School'
+         ]);
+
+         Tag::create([
+            'name' => 'University'
+         ]);
+
+         Tag::create([
+            'name' => 'International'
+         ]);
+
+         Tag::create([
+            'name' => 'Local'
+         ]);
+
+         Tag::create([
+            'name' => 'STEM'
+         ]);
+
+         Tag::create([
+            'name' => 'Arts'
+         ]);
+
+         Tag::create([
+            'name' => 'Community'
+         ]);
+
+         Tag::create([
+            'name' => 'Academics'
+         ]);
+
+         Tag::create([
+            'name' => 'Athletics'
+         ]);
+
+         Scholarship_tag::create([
+            'scholarship_id' => '1',
+            'tag_id' => '1'
+         ]);
+
+         Scholarship_tag::create([
+            'scholarship_id' => '1',
+            'tag_id' => '3'
+         ]);
+
+         Scholarship_tag::create([
+            'scholarship_id' => '1',
+            'tag_id' => '4'
+         ]);
+
+         Scholarship_tag::create([
+            'scholarship_id' => '2',
+            'tag_id' => '1'
+         ]);
         /* example: \App\Models\Scholarship::factory(10)->create();
 
          \App\Models\Scholarship::factory()->create([

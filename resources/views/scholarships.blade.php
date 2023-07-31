@@ -9,6 +9,9 @@
                                 </a>
                         </h1>
                         <div>
+<!-- if the scholarship's id matches a tag id on the scholarship-tag table, print the name of the tag that it matches.-->
+                        </div>
+                        <div>
                                 Amount: <?=$scholarship->amount; ?>
                         </div>
                         <div>

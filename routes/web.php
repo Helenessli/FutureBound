@@ -1,5 +1,7 @@
 <?php
+use App\Models\Tag;
 use App\Models\Scholarship;
+use App\Models\scholarship_tag;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
@@ -7,10 +9,12 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 Route::get('/', function () {
     $scholarships = Scholarship::all();
-
+    $tags = Tag::all();
+    $scholarship_tag = scholarship_tag::all();
     return view('scholarships', [
-        'scholarships' => $scholarships
-
+        'scholarships' => $scholarships,
+        'tags' => $tags,
+        'scholarship_tag' => $scholarship_tag
     ]);
 });
 

@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('scholarship_tag', function (Blueprint $table) {
+        Schema::create('scholarship_tags', function (Blueprint $table) {
             $table->integer('scholarship_id');
             $table->integer('tag_id');
+            $table->date('created_at');
+            $table->date('updated_at');
         });
     }
 
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('scholarship_tag');
+        Schema::dropIfExists('scholarship_tags');
     }
 };
