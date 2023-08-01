@@ -8,8 +8,13 @@
                                         <?= $scholarship->name; ?>
                                 </a>
                         </h1>
-                        <div>
 <!-- if the scholarship's id matches a tag id on the scholarship-tag table, print the name of the tag that it matches.-->
+                        <div>
+                        @foreach ($scholarship->tags as $tag)
+                        <button class="pill" type="button">
+                        {{$tag->name}}
+                        </button>
+                        @endforeach
                         </div>
                         <div>
                                 Amount: <?=$scholarship->amount; ?>

@@ -174,3 +174,19 @@ main h1{
 .inputBox ::placeholder{
     color: #999;
 }
+
+/*scholarships tags*/
+
+.pill {
+    font-size:13px;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    border: none;
+    outline: none;
+    background: #f49229;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+}
