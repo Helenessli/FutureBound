@@ -1,6 +1,13 @@
 @extends('layout.app')
 @section('section')
 <main>
+        <form action="{{ route('scholarships') }}" method="GET">
+                <input type="text" name="search" placeholder="Search">
+                <div>
+                        <span><i></i></span>
+                </div>
+        </form>
+
         <?php foreach ($scholarships as $scholarship) : ?> 
                 <article class="scholarships">
                        <h1 class="scholarships-h1"> 

@@ -3,6 +3,7 @@ use App\Models\Tag;
 use App\Models\Scholarship;
 use App\Models\scholarship_tag;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ScholarshipController;
 use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
@@ -16,7 +17,11 @@ Route::get('/', function () {
         'tags' => $tags,
         'scholarship_tag' => $scholarship_tag
     ]);
-});
+})->name('scholarships');
+
+// Route for handling the search functionality
+Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scholarships');
+
 
 Route::get('scholarships/{scholarship}', function($id) {
 
