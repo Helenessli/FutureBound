@@ -14,12 +14,13 @@ class ScholarshipController extends Controller
 
         $search = request()->query('search');
         if ($search){
-            $scholarships = Scholarship::where('title', 'LIKE', "%{$search}%");
+            $scholarships = Scholarship::where('name', 'LIKE', "%{$search}%")->simplePaginate(10);
         }
         else{
-            $scholarships = Scholarship::simplePaginate(20);
+            $scholarships = Scholarship::simplePaginate(10);
         }
-        return view('scholarships')
+        
+        return view('scholarships', ['scholarships' => $scholarships])
             ->with('scholarships', $scholarships);
     }
 }

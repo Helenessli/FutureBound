@@ -1,12 +1,32 @@
 @extends('layout.app')
 @section('section')
 <main>
+
+        <!-- display the search bar -->
         <form action="{{ route('scholarships') }}" method="GET">
-                <input type="text" name="search" placeholder="Search">
-                <div>
-                        <span><i></i></span>
+                <div class="boxContainer">
+                        <table class="elementsContainer">
+                                <tr>
+                                        <td>
+                                                <input type="text" name="search" placeholder="Search Scholarships" value = "{{ request()->query('search') }}">
+                                        </td>
+                                        <td>
+                                                <span class="material-icons">
+                                                        search
+                                                </span>
+                                        </td>
+                                </tr>
+                        </table>
                 </div>
         </form>
+
+        <!-- print a message for the user if there are no posts that match search query -->
+        @forelse($scholarships as $scholarship)
+        @empty
+        <p class="text-center">
+                No results found for query <strong>{{ request()->query('search') }}</strong>
+        </p>
+        @endforelse
 
         <?php foreach ($scholarships as $scholarship) : ?> 
                 <article class="scholarships">

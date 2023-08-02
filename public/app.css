@@ -104,7 +104,7 @@ main h1{
     color: #f1850c;
 }
 
-/* form */
+/* add scholarship form */
 .formBox {
     position: relative;
     width: 100%;
@@ -139,7 +139,7 @@ main h1{
     padding: 10px;
     font-size: 0.9em;
     outline: none;
-    border: 1px solid #333;
+    border: 1.5px solid #333;
 }
 
 .inputBox textarea {
@@ -147,7 +147,7 @@ main h1{
     padding: 10px;
     font-size: 0.9em;
     outline: none;
-    border: 1px solid #333;
+    border: 1.5px solid #333;
     min-height: 220px;
     margin-bottom: 10px;
 }
@@ -171,7 +171,7 @@ main h1{
     color: #f1850c;
 }
 
-.inputBox ::placeholder{
+.placeholder{
     color: #999;
 }
 
@@ -190,3 +190,41 @@ main h1{
     cursor: pointer;
     border-radius: 25px;
 }
+
+/* search bar */
+.boxContainer {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    padding: 0px 20px;
+    border-radius: 50px;
+    align-items: center;
+    display: flex; /* Add display: flex */
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.elementsContainer {
+    width: 100%;
+    align-items: center;
+}
+
+.material-icons{
+    margin-top: 6px;
+    font-size: 15;
+    color: black;
+}
+
+input[name="search"] {
+    outline: none;
+    width: 100%;
+    border: none;
+    font-weight: 400;
+    background: transparent;
+    align-items: center;
+    margin-bottom: 2.5px;
+    font-size: 0.9em;
+    
+  }
