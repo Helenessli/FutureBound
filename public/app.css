@@ -211,7 +211,15 @@ main h1{
     align-items: center;
 }
 
+.td1 {
+    width: 100%;
+}
+.td2 {
+    width: 0%;
+}
+
 .material-icons{
+    margin-left: 230px;
     margin-top: 6px;
     font-size: 15;
     color: black;
@@ -228,3 +236,4 @@ input[name="search"] {
     font-size: 0.9em;
     
   }
+

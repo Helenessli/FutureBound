@@ -7,13 +7,13 @@
                 <div class="boxContainer">
                         <table class="elementsContainer">
                                 <tr>
-                                        <td>
+                                        <td class="td1">
                                                 <input type="text" name="search" placeholder="Search Scholarships" value = "{{ request()->query('search') }}">
                                         </td>
-                                        <td>
-                                                <span class="material-icons">
+                                        <td class="td2">
+                                                <div class="material-icons">
                                                         search
-                                                </span>
+                                                </div>
                                         </td>
                                 </tr>
                         </table>
