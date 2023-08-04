@@ -7,7 +7,7 @@ use App\Http\Controllers\ScholarshipController;
 use Illuminate\Support\Facades\File;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
 
-
+//Route for displaying the home scholarships page
 Route::get('/', function () {
     $scholarships = Scholarship::all();
     $tags = Tag::all();
@@ -22,7 +22,7 @@ Route::get('/', function () {
 // Route for handling the search functionality
 Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scholarships');
 
-
+//Route for displaying the single specific scholarships
 Route::get('scholarships/{scholarship}', function($id) {
 
     return view('scholarship', [
@@ -31,11 +31,13 @@ Route::get('scholarships/{scholarship}', function($id) {
 
 })->where('scholarship', '[0-9]+');
 
+//Route for handling going to the add page
 Route::get('add', function () {
 
     return view('add');
 });
 
+//Route for handling submitting the form in the add page
 Route::post('add', function () {
     
     $data = request(['name', 'amount', 'criteria', 'deadline', 'url']);
