@@ -80,10 +80,16 @@ article + article {
     border-top: 1px solid #c5c5c5;
 }
 
+.scholarships {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid #c5c5c5;
+}
+
 main {
-    padding-top: 100px; /* Adjust the value as needed based on your header's height */
-    padding-left: 112px; /* Add left padding */
-    padding-right: 112px; /* Add right padding */
+    padding-top: 100px; 
+    padding-left: 112px; 
+    padding-right: 112px; 
 }
 
 
