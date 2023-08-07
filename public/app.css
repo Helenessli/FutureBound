@@ -242,4 +242,8 @@ input[name="search"] {
     font-size: 0.9em;
     
   }
+/*tags filter */
 
+.container{
+    max-width: 320px;
+}

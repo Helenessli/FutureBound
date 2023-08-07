@@ -18,41 +18,39 @@
                         </table>
                 </div>
         </form>
-        <!-- print a message for the user if there are no posts that match search query -->
-        @forelse($scholarships as $scholarship)
-        @empty
-        <p class="text-center">
-                No results found for query <strong>{{ request()->query('search') }}</strong>
-        </p>
-        @endforelse
         <!-- display the tags filter -->
         <!-- tags list -->
         <form action="" method="GET">
 
-        
-        <div>
-                <h5>Filter
-                        <button type ="submit">Search</button>
-                </h5>
+<div class="container">       
+        <div class="select-btn">
+                <span class="btn-text">Filter by Tag</span>
+                <span class="arrow-dwn">
+                        <i class="fa-solid fa-chevron-down"></i>
+                </span>
         </div>
         <div class = "card-body">
                 <h6>Tags List</h6>
                 <?php 
+                        session_start();
                         $con = mysqli_connect("localhost", "root", "", "scholarships");
                         $tags_query = "SELECT * FROM tags";
                         $tags_query_run = mysqli_query($con, $tags_query);
 
+                        // when the form is submitted via the tag filter, store the selected tags in the session
+                        if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['tags'])) {
+                                $_SESSION["selected_tags"] = $_GET['tags'];
+                        }
+
+                        // retrieve the selected tags from the session
+                        $selected_tags = isset($_SESSION["selected_tags"]) ? $_SESSION["selected_tags"] : array();
+
                         if (mysqli_num_rows($tags_query_run) > 0) {
                                 foreach($tags_query_run as $tagslist){
-                                        $checked = [];
-                                        if(isset($_GET['tags'])){
-                                                $checked = $_GET['tags'];
-                                        }
                                         ?>
                                         <div>
-                                                <input type="checkbox" name="tags[]" value="<?= $tagslist['id']?>"
-                                                        <?php if(in_array($tagslist['id'], $checked)){echo "checked";} ?>
-                                                />
+                                                <input type="checkbox" name="tags[]" value="<?= $tagslist['id'] ?>"
+                                                        <?php if (in_array($tagslist['id'], $selected_tags)) echo "checked"; ?>>
                                                 <?= $tagslist['name']; ?>
                                         </div>
                                         <?php
@@ -60,7 +58,18 @@
                         }
                 ?>
         </div>
+</div> 
+<button type ="submit">Search</button>
         </form>
+
+        <!-- print a message for the user if there are no posts that match search query -->
+        @forelse($scholarships as $scholarship)
+        @empty
+        <p class="text-center">
+                No results found for query <strong>{{ request()->query('search') }}</strong>
+        </p>
+        @endforelse
+
         <!-- tags scholarships-->
         <div>
                 
