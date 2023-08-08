@@ -49,6 +49,7 @@ Route::post('add', function () {
     ->with('flash', 'Form Submitted Successfully. The submission is under review.');
 });
 
-
+//Route for filtering deadlines
+Route::get('/filterdeadline', [ScholarshipController::class, 'filterdeadline']);
 
 

@@ -62,6 +62,20 @@
 <button type ="submit">Search</button>
         </form>
 
+        <!-- deadline range filter-->
+        <form method="GET" action="/filterdeadline">
+        <div>
+                <label>Start Deadline:</label>
+                <input type="date" name="start_deadline" class="form-control">
+        </div>
+        <div>
+                <label>End Deadline:</label>
+                <input type="date" name="end_deadline" class="form-control">
+        </div>
+        <div>
+                <button type="submit" class="btn btn-primary">Filter By Deadline</button>
+        </div>
+        </form>
         <!-- print a message for the user if there are no posts that match search query -->
         @forelse($scholarships as $scholarship)
         @empty

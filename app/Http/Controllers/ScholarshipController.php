@@ -23,4 +23,15 @@ class ScholarshipController extends Controller
         return view('scholarships', ['scholarships' => $scholarships])
             ->with('scholarships', $scholarships);
     }
+    
+    public function filterdeadline(Request $request){
+        $start_deadline = $request->start_deadline;
+        $end_deadline = $request->end_deadline;
+
+        $scholarships = Scholarship::whereDate('deadline','>=', $start_deadline)
+                                    ->whereDate('deadline', '<=', $end_deadline)
+                                    ->get();
+                                
+        return view('scholarships', compact('scholarships'));
+    }
 }
