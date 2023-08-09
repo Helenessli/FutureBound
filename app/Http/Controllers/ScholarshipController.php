@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Scholarship;
 use App\Category;
-use App\Tag;
-use App\Post;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class ScholarshipController extends Controller
@@ -12,26 +12,28 @@ class ScholarshipController extends Controller
     public function index()
     {
 
-        $search = request()->query('search');
-        if ($search){
-            $scholarships = Scholarship::where('name', 'LIKE', "%{$search}%")->simplePaginate(10);
-        }
-        else{
-            $scholarships = Scholarship::simplePaginate(10);
-        }
-        
-        return view('scholarships', ['scholarships' => $scholarships])
-            ->with('scholarships', $scholarships);
-    }
-    
-    public function filterdeadline(Request $request){
-        $start_deadline = $request->start_deadline;
-        $end_deadline = $request->end_deadline;
+        $scholarships = Scholarship::query()
+            ->when(request('search'), function ($query, $search) {
+                $query->where('name', 'like', "%$search%");
+            })
+            ->when(request('tags', false), function ($query, $tags) {
+                $query->whereHas('tags', function ($query) {
+                    $query->whereIn('tags.id', array_values(request('tags', [])));
+                });
+            })
+            ->when(request('start_deadline'), function ($query, $date) {
+                $query->whereDate('deadline', '>=', $date);
+            })
+            ->when(request('end_deadline'), function ($query, $date) {
+                $query->whereDate('deadline', '<=', $date);
+            })
+            ->get();
 
-        $scholarships = Scholarship::whereDate('deadline','>=', $start_deadline)
-                                    ->whereDate('deadline', '<=', $end_deadline)
-                                    ->get();
-                                
-        return view('scholarships', compact('scholarships'));
+        $tags = Tag::all();
+
+        return view('scholarships', [
+            'scholarships' => $scholarships,
+            'tags' => $tags
+        ]);
     }
 }
