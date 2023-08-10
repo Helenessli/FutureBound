@@ -21,7 +21,7 @@
       </div>
 
 
-      <!-- Tags -->
+      <!-- Tags  filter -->
       <div class="container">
          <div class="select-btn">
             <span class="btn-text">Filter by Tag</span>
@@ -29,18 +29,18 @@
                <i class="fa-solid fa-chevron-down"></i>
             </span>
          </div>
-         <div class="card-body">
+         <ul class="list-items">
             @foreach($tags as $tag)
-            <div>
-               <input type="checkbox" name="tags[]" value="{{ $tag->id }}" @checked(in_array($tag->id, request('tags', [])))>
-               {{ $tag->name }}
-            </div>
+            <li class="item">
+               <input class="checkbox" type="checkbox" name="tags[]" value="{{ $tag->id }}" @checked(in_array($tag->id, request('tags', [])))>
+               <span class="item-text">{{ $tag->name }} </span>
+            </li>
             @endforeach
+         </ul>
 
-         </div>
       </div>
 
-
+      <!-- deadline filter-->
       <div>
          <label>Start Deadline:</label>
          <input type="date" name="start_deadline" class="form-control" value={{request('start_deadline', '')}}>
@@ -83,10 +83,6 @@
             Deadline:{{$scholarship->deadline}}
          </div>
 
-         <div>
-            Criteria: {{$scholarship->criteria}}
-         </div>
-
          <br>
 
          <a href="/scholarships/{{$scholarship->id}}" class="btn">
@@ -102,6 +98,7 @@
 
 
 
-
+   <!-- Javascript for tags filter-->
+   <script src="{{ asset('script.js') }}"></script>
 </main>
 @endSection

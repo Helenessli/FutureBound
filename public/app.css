@@ -67,11 +67,13 @@ body {
     text-decoration: none;
     font-weight: 400;
     color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background: transparent;
     color: #f1850c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 article + article {
@@ -175,6 +177,7 @@ main h1{
 .inputBox input[type="submit"]:hover{
     background: transparent;
     color: #f1850c;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .placeholder{
@@ -195,6 +198,7 @@ main h1{
     color: white;
     cursor: pointer;
     border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* search bar */
@@ -210,6 +214,7 @@ main h1{
     display: flex; /* Add display: flex */
     justify-content: space-between;
     margin-bottom: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .elementsContainer {
@@ -277,4 +282,55 @@ input[name="search"] {
     color: white;
     font-size: 14px;
     border-radius: 50%;
+    transition: 0.3s;
+}
+
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg)
+}
+
+.list-items{
+    position: relative;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.select-btn.open ~ .list-items{
+    display: block;
+}
+
+.list-items .item{
+    list-style: none;
+    display:flex;
+    align-items: center;
+    height: 50px;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+
+.list-items .item:hover{
+    background-color: #fce1c9;
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid black;
+    cursor: pointer;
+}
+
+.item .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+
 }
