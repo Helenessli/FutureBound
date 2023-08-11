@@ -62,18 +62,18 @@ body {
     background: #f1850c;
     border: 2px solid #f1850c;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     font-size: 15px;
     text-decoration: none;
     font-weight: 400;
     color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
     background: transparent;
     color: #f1850c;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 article + article {
@@ -166,7 +166,7 @@ main h1{
     background: #f1850c;
     border: 2px solid #f1850c;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     font-size: 15px;
     text-decoration: none;
     font-weight: 400;
@@ -177,7 +177,7 @@ main h1{
 .inputBox input[type="submit"]:hover{
     background: transparent;
     color: #f1850c;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .placeholder{
@@ -198,9 +198,14 @@ main h1{
     color: white;
     cursor: pointer;
     border-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-
+/* All filters */
+.filterscontainer{
+    display: flex;
+    flex-direction: row; 
+    
+}
 /* search bar */
 .boxContainer {
     margin: auto;
@@ -214,7 +219,7 @@ main h1{
     display: flex; /* Add display: flex */
     justify-content: space-between;
     margin-bottom: 30px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .elementsContainer {
@@ -263,7 +268,7 @@ input[name="search"] {
     padding: 0 16px;
     border-radius: 8px;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .select-btn .btn-text{
@@ -295,7 +300,7 @@ input[name="search"] {
     margin-top: 15px;
     border-radius: 8px;
     padding: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
 
@@ -333,4 +338,28 @@ input[name="search"] {
     font-weight: 400;
     color: black;
 
+}
+
+/*deadline filters*/
+
+input[type="date"]{
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    color: black;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+::-webkit-calendar-picker-indicator{
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    filter: none; /* Remove any filter effects */
+    background-color: #f49229; /* Set the background color */
+    color: white; /* Set the color of the icon */
 }

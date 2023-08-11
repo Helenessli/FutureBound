@@ -22,6 +22,7 @@
 
 
       <!-- Tags  filter -->
+      <div class="filterscontainer">
       <div class="container">
          <div class="select-btn">
             <span class="btn-text">Filter by Tag</span>
@@ -43,16 +44,17 @@
       <!-- deadline filter-->
       <div>
          <label>Start Deadline:</label>
-         <input type="date" name="start_deadline" class="form-control" value={{request('start_deadline', '')}}>
+         <input class="deadlineinputs" type="date" name="start_deadline" class="form-control" value={{request('start_deadline', '')}}>
       </div>
 
       <div>
          <label>End Deadline:</label>
-         <input type="date" name="end_deadline" class="form-control">
+         <input class="deadlineinputs" type="date" name="end_deadline" class="form-control" value={{request('start_deadline', '')}}>
       </div>
 
       <div>
          <button type="submit" class="btn btn-primary">Filter By Deadline</button>
+      </div>
       </div>
    </form>
 
