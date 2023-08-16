@@ -10,19 +10,12 @@
 
 <body>
     <header class="header">
-        <a href="/" class="logo">Logo.</a>
             <nav class="navbar">
                 <ul class="nav__links"> 
                     <a href="/" style="--i:1;">Explore Scholarships</a>
                     <a href="/add" style="--i:2;">Add Scholarship</a>
                 </ul>
             </nav>
-
-            <div class="social-media">
-                <i class='bx bxl-twitter'></i>
-                <i class='bx bxl-facebook'></i>
-                <i class='bx bxl-instagram'></i>
-            </div>
         </header>
         @yield('section') 
  

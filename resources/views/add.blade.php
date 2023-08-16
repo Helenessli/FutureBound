@@ -3,7 +3,7 @@
 
 <main>
 <div class="scholarship form">
-    <h3>Add a Scholarship</h3><br>
+    <h2>Add a Scholarship</h2><br>
     <form method="POST">
     @csrf
         <div class="formBox">

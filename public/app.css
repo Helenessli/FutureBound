@@ -4,49 +4,119 @@
     margin: 0;
     padding:0; 
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gill Sans', sans-serif;
 }
 
 body {
     background: white;
 }
 
+/* nav bar*/
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 8%;
-    background: white;
+    background: #f3f2f8;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.social-media {
-    color: white;
+.navbar {
+    width: 36%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.logo {
-    font-size: 22px;
-    color: black;
+.nav__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    font-size: 15px;
+    color: #8d8599;
     text-decoration: none;
     font-weight: 600;
-}
-
-.navbar a {
-    font-size: 17px;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
     margin: 0 30px;
 }
 
 .navbar a:hover {
-    color: #f1850c;
+    color: #6d717c;
 }
 
+/* second heading part on homepage*/
+.heading2 {
+    background: #f3f2f8;
+    padding-top: 90px; 
+    padding-left: 112px; 
+    padding-right: 112px; 
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 33px;
+    margin-bottom: 16px;
+}
+
+.tiny{
+    font-size: 15px;
+    color: #8d8599;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.description1 {
+    color: #8d8599;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.allfiltercontainer {
+    display: flex;
+}
+
+.tagsfiltercontainer {
+    margin: auto;
+    position: relative;
+    width: 1100px;
+    height: 58px;
+    padding: 0px 0px;
+    align-items: center;
+    display: flex; 
+    margin-bottom: 30px;
+    background: white;
+    
+}
+
+.deadlinefiltercontainer {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    height: 58px;
+    padding: 0px 0px;
+    align-items: center;
+    display: flex; 
+    margin-bottom: 30px;
+    background: white;
+    margin-left: 2px;
+    
+}
+
+.deadlinelabel {
+    font-weight: 400;
+    font-size: 15px;
+    color: #6e6e72;
+    margin-left: 15px;
+    margin-right: 12px;
+}
+
+/* scholarship listings*/
 .scholarships body{
     max-width: 600px;
     margin: auto;
@@ -58,12 +128,12 @@ body {
 
 .btn {
     display:inline-block;
-    padding: 8px 25px;
-    background: #f1850c;
-    border: 2px solid #f1850c;
+    padding: 8px 16px;
+    background: #6123d3;
+    border: 2px solid #6123d3;
     border-radius: 6px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    font-size: 15px;
+    font-size: 14px;
     text-decoration: none;
     font-weight: 400;
     color: white;
@@ -72,7 +142,7 @@ body {
 
 .btn:hover {
     background: transparent;
-    color: #f1850c;
+    color: #6123d3;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -89,7 +159,6 @@ article + article {
 }
 
 main {
-    padding-top: 100px; 
     padding-left: 112px; 
     padding-right: 112px; 
 }
@@ -166,7 +235,6 @@ main h1{
     background: #f1850c;
     border: 2px solid #f1850c;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     font-size: 15px;
     text-decoration: none;
     font-weight: 400;
@@ -180,9 +248,6 @@ main h1{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.placeholder{
-    color: #999;
-}
 
 /*scholarships tags*/
 
@@ -198,47 +263,34 @@ main h1{
     color: white;
     cursor: pointer;
     border-radius: 25px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-/* All filters */
-.filterscontainer{
-    display: flex;
-    flex-direction: row; 
-    
-}
+
 /* search bar */
 .boxContainer {
     margin: auto;
     position: relative;
     width: 100%;
-    height: 50px;
-    border: 2px solid black;
-    padding: 0px 20px;
-    border-radius: 50px;
+    height: 58px;
+    padding: 0px 0px;
     align-items: center;
     display: flex; /* Add display: flex */
     justify-content: space-between;
-    margin-bottom: 30px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2px;
+    background: white;
 }
 
 .elementsContainer {
     width: 100%;
     align-items: center;
-}
-
-.td1 {
-    width: 100%;
-}
-.td2 {
-    width: 0%;
+    display: flex;
+    justify-content: center;
 }
 
 .material-icons{
-    margin-left: 230px;
-    margin-top: 6px;
-    font-size: 15;
-    color: black;
+    margin-left: 15px;
+    margin-top: 0px;
+    font-size: 20px;
+    color: #7a797f;
 }
 
 input[name="search"] {
@@ -248,46 +300,49 @@ input[name="search"] {
     font-weight: 400;
     background: transparent;
     align-items: center;
-    margin-bottom: 2.5px;
-    font-size: 0.9em;
-    
+    margin-bottom: 1.5px;
+    font-size: 15px;
+    margin-left: 10px;
+    color: #6e6e72;
   }
+
+.btn-search{
+    margin-right: 10px;
+}
 /*tags filter */
 
-.container{
-    max-width: 320px;
-    width: 100%;
-    border-radius: 8px;
-}
 
 .select-btn {
     display:flex;
-    height: 50px;
+    height: 36px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
-    border-radius: 8px;
+    padding: 0 12px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    margin-left: 15px;
+    border: 1.5px solid #c9c8ce;
 }
 
 .select-btn .btn-text{
-    font-size: 17px;
-    font-weight: 400;
-    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    color: #7a797f;
 }
 
 .select-btn .arrow-dwn{
     display: flex;
     height:21px;
     width: 21px;
-    background: #f49229;
+    background: white;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #7a797f;
     font-size: 14px;
     border-radius: 50%;
     transition: 0.3s;
+    margin-left: 10px;
 }
 
 .select-btn.open .arrow-dwn{
@@ -298,9 +353,8 @@ input[name="search"] {
     position: relative;
     background-color: white;
     margin-top: 15px;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: none;
 }
 
@@ -344,22 +398,24 @@ input[name="search"] {
 
 input[type="date"]{
     background-color: white;
-    padding: 15px;
+    height: 36px;
+    padding: 0 12px;
     position: absolute;
-    color: black;
-    font-size: 17px;
     border: none;
     outline: none;
     border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     position: relative;
+    border: 1.5px solid #c9c8ce;
+    font-size: 14px;
+    font-weight: 600;
+    color: #7a797f;
 }
 
 ::-webkit-calendar-picker-indicator{
     padding: 5px;
     cursor: pointer;
     border-radius: 3px;
-    filter: none; /* Remove any filter effects */
-    background-color: #f49229; /* Set the background color */
-    color: white; /* Set the color of the icon */
+    filter: none; 
+    background-color: #363731; 
+    filter: invert(100);
 }
