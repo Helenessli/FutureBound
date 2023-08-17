@@ -146,8 +146,8 @@ h2 {
 .btn {
     display:inline-block;
     padding: 8px 16px;
-    background: #6123d3;
-    border: 2px solid #6123d3;
+    background: #7135e0;
+    border: 2px solid #7135e0;
     border-radius: 6px;
     font-size: 14px;
     text-decoration: none;
@@ -172,6 +172,17 @@ article {
 }
 
 /* scholarship.blade.php page*/
+.heading3 {
+    background: #f3f2f8;
+    padding-left: 112px; 
+    padding-right: 112px; 
+    padding-bottom: 15px;
+}
+
+.heading3::after{
+    background: #f3f2f8;
+}
+
 .scholarshipinfo {
     margin-top: 12px;
 }
@@ -179,6 +190,7 @@ article {
 main {
     padding-left: 112px; 
     padding-right: 112px; 
+    background-color: white;
 }
 
 
@@ -416,7 +428,6 @@ input[name="search"] {
     display:flex;
     align-items: center;
     height: 50px;
-    transition: 0.3s;
     padding: 0 15px;
     border-radius: 8px;
 }

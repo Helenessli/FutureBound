@@ -18,8 +18,8 @@
             </ul>
         </nav>
     </header>
+    
     @yield('section')
-
-    <?php $numScholarship = 0; ?>
-
+    
     </html>
+    

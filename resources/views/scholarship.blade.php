@@ -10,13 +10,13 @@
                 @endforeach
                 <div class="scholarshipinfo">
                         <div>
-                                Deadline: <?= $scholarship->deadline; ?>
+                                Deadline:&nbsp; <?= $scholarship->deadline; ?>
                         </div>
                         <div>
-                                Amount: $<?= $scholarship->amount; ?>
+                                Amount: &nbsp;$<?= $scholarship->amount; ?>
                         </div>
                         <div>
-                                Criteria: <?= $scholarship->criteria; ?>
+                                Criteria:&nbsp; <?= $scholarship->criteria; ?>
                         </div>
                 </div>
                 <br>
