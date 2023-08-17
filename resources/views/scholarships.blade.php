@@ -95,9 +95,9 @@
 
          <br>
 
-         <a href="/scholarships/{{$scholarship->id}}" class="btn">
+       <!--  <a href="/scholarships/{{$scholarship->id}}" class="btn">
             Learn More
-         </a>
+         </a> -->
       </article>
 
       @empty
