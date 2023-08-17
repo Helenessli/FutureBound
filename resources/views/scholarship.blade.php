@@ -2,26 +2,29 @@
 @section('section')
 <main>
         <article>
-                <h1><?= $scholarship->name; ?></h1>
+                <h1 class="scholarships-h1"><?= $scholarship->name; ?></h1>
                 @foreach ($scholarship->tags as $tag)
                 <button class="pill" type="button">
-                {{$tag->name}}
+                        {{$tag->name}}
                 </button>
                 @endforeach
-                <div>
-                        Amount: <?=$scholarship->amount; ?>
+                <div class="scholarshipinfo">
+                        <div>
+                                Deadline: <?= $scholarship->deadline; ?>
+                        </div>
+                        <div>
+                                Amount: $<?= $scholarship->amount; ?>
+                        </div>
+                        <div>
+                                Criteria: <?= $scholarship->criteria; ?>
+                        </div>
                 </div>
-                <div>
-                        Deadline: <?=$scholarship->deadline; ?>
-                </div>
-                <div>
-                        Criteria: <?=$scholarship->criteria; ?>
-                </div>
+                <br>
+                <a href="<?= $scholarship->url; ?>" class="btn">
+                        Apply
+                </a>
+                <br>
         </article>
-        <br>
-        <a href="<?=$scholarship->url; ?>" class="btn">
-                Official Page
-        </a>
-        <br>
+
 </main>
 @endSection

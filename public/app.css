@@ -13,7 +13,6 @@ body {
 
 /* nav bar*/
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -52,7 +51,6 @@ body {
 /* second heading part on homepage*/
 .heading2 {
     background: #f3f2f8;
-    padding-top: 90px; 
     padding-left: 112px; 
     padding-right: 112px; 
     padding-bottom: 15px;
@@ -117,27 +115,44 @@ h2 {
 }
 
 /* scholarship listings*/
+.empty {
+    margin-top: 15px;
+}
 .scholarships body{
     max-width: 600px;
     margin: auto;
 }
 
 .scholarships p {
+    margin-top: 30px;
     line-height: 1.6;
+    font-size: 15px;
+    color: #8d8599;
 }
 
+.scholarships-h1 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.iconandinfo {
+    display:flex;
+}
+
+.iconandinfo2 {
+    display: flex;
+    margin-left: 12px;
+}
 .btn {
     display:inline-block;
     padding: 8px 16px;
     background: #6123d3;
     border: 2px solid #6123d3;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     font-size: 14px;
     text-decoration: none;
     font-weight: 400;
     color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
@@ -146,16 +161,19 @@ h2 {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-article + article {
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid #c5c5c5;
+article {
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 1.5px solid #ebebeb;
+    border-radius: 6px;
 }
 
-.scholarships {
-    margin-top: 3rem;
-    padding-top: 3rem;
-    border-top: 1px solid #c5c5c5;
+/* scholarship.blade.php page*/
+.scholarshipinfo {
+    margin-top: 12px;
 }
 
 main {
@@ -178,7 +196,7 @@ main h1{
 }
 
 .scholarships-h1 a:hover{ 
-    color: #f1850c;
+    color: #6123d3;
 }
 
 /* add scholarship form */
@@ -248,21 +266,23 @@ main h1{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-
 /*scholarships tags*/
 
 .pill {
     font-size:13px;
-    padding: 0.5em 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-radius: 1em;
+    padding: 0.3em 0.8em;
+    margin-top: 1.5em;
+    margin-bottom: 3px;
+    margin-right: 4px;
     border: none;
     outline: none;
-    background: #f49229;
-    color: white;
-    cursor: pointer;
-    border-radius: 25px;
+    background: #e5dcf7;
+    color: #7730d3;
+    border-radius: 13px;
+}
+
+.tagname {
+    font-weight: 500;
 }
 
 /* search bar */
@@ -309,6 +329,35 @@ input[name="search"] {
 .btn-search{
     margin-right: 10px;
 }
+
+.scholarship-icons {
+    display: flex;
+    color: #a2a0aa;
+    margin-top: 13px;
+}
+
+.scholarship-icons div{
+    display: flex;
+    color: #a2a0aa;
+}
+
+
+.material-symbols-outlined{
+    color: #a2a0aa;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.scholarshiplistinfo {
+    margin-top: 1.5px;
+    margin-left: 0px;
+}
+
+.scholarshiplistinfo1 {
+    margin-top: 2px;
+    margin-left: 6px;
+}
+
 /*tags filter */
 
 
@@ -400,7 +449,6 @@ input[type="date"]{
     background-color: white;
     height: 36px;
     padding: 0 12px;
-    position: absolute;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -415,7 +463,6 @@ input[type="date"]{
     padding: 5px;
     cursor: pointer;
     border-radius: 3px;
-    filter: none; 
-    background-color: #363731; 
+    filter: none;     background-color: #363731; 
     filter: invert(100);
 }

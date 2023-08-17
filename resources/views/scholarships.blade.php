@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('section')
 
-<!-- display the search bar -->
 <div class="heading2">
    <p class="tiny">Scholarships</p>
    <h2>Scholarships</h2>
@@ -51,7 +50,7 @@
 
             <div>
                <label class="deadlinelabel">to</label>
-               <input class="deadlineinputs" type="date" name="end_deadline" class="form-control" value={{request('start_deadline', '')}}>
+               <input class="deadlineinputs" type="date" name="end_deadline" class="form-control" value={{request('end_deadline', '')}}>
             </div>
          </div>
       </div>
@@ -59,31 +58,39 @@
 </div>
 <main>
 
-   <div>
-
+   <div class="scholarships">
+      <p class="numScholarships">{{count($scholarships)}} scholarships</p>
       @forelse($scholarships as $scholarship)
-
       <article>
+
          <h1 class="scholarships-h1">
             <a href="/scholarships/{{$scholarship->id }}">
                {{ $scholarship->name }}
             </a>
          </h1>
 
+         <div class="scholarship-icons">
+            <div class="iconandinfo">
+               <span class="material-symbols-outlined">
+                  event
+               </span>
+               <span class = "scholarshiplistinfo1">{{$scholarship->deadline}}</span>
+            </div>
+
+            <div class = "iconandinfo2">
+               <span class="material-symbols-outlined">
+                  attach_money
+               </span>
+               <span class = "scholarshiplistinfo">{{$scholarship->amount}}</span>
+            </div>
+         </div>
+
          <div>
             @foreach ($scholarship->tags as $tag)
             <button class="pill" type="button">
-               {{$tag->name}}
+               <span class="tagname">{{$tag->name}}</span>
             </button>
             @endforeach
-         </div>
-
-         <div>
-            Amount: {{$scholarship->amount}}
-         </div>
-
-         <div>
-            Deadline:{{$scholarship->deadline}}
          </div>
 
          <br>
@@ -94,7 +101,7 @@
       </article>
 
       @empty
-      <div>No scholarships found.</div>
+      <div class="empty">No scholarships found.</div>
       @endforelse
 
    </div>
