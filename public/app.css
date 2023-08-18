@@ -520,7 +520,7 @@ input[type="date"]{
 
 /* pagination */
 .pagination {
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 20px;
     display: flex;
     list-style: none;
@@ -530,16 +530,25 @@ input[type="date"]{
 
 .pagination li {
     margin: 0 5px;
-}
-
-.pagination a {
     text-decoration: none;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 
-.pagination a.active {
-    background-color: #007bff;
+.pagination a {
+    text-decoration: none;
+}
+
+.pagination .page-link{
+    color: #6123d3;
+}
+
+.pagination .page-item.active {
+    background-color: #6123d3;
     color: white;
+}
+
+.page-item.active .page-link{
+    color:white;
 }
