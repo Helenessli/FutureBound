@@ -24,7 +24,7 @@
          <div class="tagsfiltercontainer">
             <div class="container">
                <div class="select-btn">
-                  <span class="btn-text">Tags</span>
+                  <span class="btn-text">Filter by Category</span>
                   <span class="arrow-dwn">
                      <i class="fa-solid fa-chevron-down"></i>
                   </span>
