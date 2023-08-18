@@ -192,7 +192,6 @@ article a {
     padding-right: 18px;
 }
 
-
 .cell:hover .scholarships-h1{
     color: #6123d3;
 }
@@ -202,17 +201,19 @@ article a {
     cursor: pointer;
 }
 
+.articlescholarships:hover .cell{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
 
 .cell:hover .btn{
     background: transparent;
     color: #6123d3;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
     background: transparent;
     color: #6123d3;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -221,6 +222,7 @@ article {
     border: 1.5px solid #ebebeb;
     border-radius: 6px;
 }
+
 
 /* scholarship.blade.php page*/
 .heading3 {

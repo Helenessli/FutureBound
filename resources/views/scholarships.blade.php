@@ -62,7 +62,7 @@
       <p class="numScholarships">{{$totalScholarships}} scholarships</p>
       <div class="scholarship-list">
       @forelse($scholarships as $scholarship)
-      <article>
+      <article class="articlescholarships">
          <a href="/scholarships/{{$scholarship->id }}">
             <div class="cell">
                <h1 class="scholarships-h1">
