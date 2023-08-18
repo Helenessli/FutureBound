@@ -446,7 +446,7 @@ input[name="search"] {
     color: #7a797f;
     font-size: 14px;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: transform 0.3s;
     margin-left: 10px;
 }
 
