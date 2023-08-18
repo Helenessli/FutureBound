@@ -59,7 +59,8 @@
 <main>
 
    <div class="scholarships">
-      <p class="numScholarships">{{count($scholarships)}} scholarships</p>
+      <p class="numScholarships">{{$totalScholarships}} scholarships</p>
+      <div class="scholarship-list">
       @forelse($scholarships as $scholarship)
       <article>
          <a href="/scholarships/{{$scholarship->id }}">
@@ -105,7 +106,7 @@
       @empty
       <div class="empty">No scholarships found.</div>
       @endforelse
-
+      </div>
    </div>
    <div class="pagination">
    {{$scholarships->links()}}

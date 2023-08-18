@@ -31,9 +31,12 @@ class ScholarshipController extends Controller
 
         $tags = Tag::all();
 
+        $totalScholarships = $scholarships->total(); 
+
         return view('scholarships', [
             'scholarships' => $scholarships,
-            'tags' => $tags
+            'tags' => $tags,
+            'totalScholarships' => $totalScholarships
         ]);
     }
 }

@@ -131,6 +131,16 @@ h2 {
     max-width: 600px;
     margin: auto;
 }
+.scholarship-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 5px; 
+ }
+ 
+ .scholarships article{
+    width: calc(50% - 10px); 
+ }
 
 .scholarships p {
     margin-top: 30px;
@@ -515,6 +525,7 @@ input[type="date"]{
     display: flex;
     list-style: none;
     padding: 0;
+     justify-content: center;
 }
 
 .pagination li {
