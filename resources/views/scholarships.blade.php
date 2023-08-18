@@ -95,7 +95,7 @@
 
                <br>
 
-               <span class="btn">
+               <span class="btn2">
                   Learn More
                <span>
             </div>
