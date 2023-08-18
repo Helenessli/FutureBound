@@ -5,7 +5,7 @@
 <div class="heading3">
     <p class="tiny">Add</p>
     <h2>Add a Scholarship</h2>
-    <p class="description2">Submit a scholarship for it to be added to our comprehensive list.   Please note that the reviewing process might take up to <span style="color: #652dcb; font-weight: 600;">three business days</span>.</p>
+    <p class="description2">Submit a scholarship for it to be added to our comprehensive list.   Please note that the reviewing process may take up to <span style="color: #652dcb; font-weight: 600;">three business days</span>.</p>
 
 
     <div class="scholarship form">
