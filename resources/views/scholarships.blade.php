@@ -107,8 +107,9 @@
       @endforelse
 
    </div>
-
-
+   <div class="pagination">
+   {{$scholarships->links()}}
+   </div>
    <!-- Javascript for tags filter-->
    <script src="{{ asset('script.js') }}"></script>
 </main>

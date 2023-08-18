@@ -507,3 +507,28 @@ input[type="date"]{
     filter: none;     background-color: #363731; 
     filter: invert(100);
 }
+
+/* pagination */
+.pagination {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+}

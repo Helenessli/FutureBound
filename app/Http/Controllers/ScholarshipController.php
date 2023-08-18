@@ -27,7 +27,7 @@ class ScholarshipController extends Controller
             ->when(request('end_deadline'), function ($query, $date) {
                 $query->whereDate('deadline', '<=', $date);
             })
-            ->get();
+            ->paginate(5);
 
         $tags = Tag::all();
 
