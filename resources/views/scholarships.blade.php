@@ -13,7 +13,7 @@
             <div class="material-icons">
                search
             </div>
-            <input type="text" name="search" placeholder="Scholarship title or keyword" value="{{ request()->query('search') }}">
+            <input type="text" name="search" placeholder="Scholarship name or keyword" value="{{ request()->query('search') }}">
             <button type="submit" class="btn btn-search">Search</button>
          </div>
       </div>
@@ -62,50 +62,51 @@
       <p class="numScholarships">{{count($scholarships)}} scholarships</p>
       @forelse($scholarships as $scholarship)
       <article>
+         <a href="/scholarships/{{$scholarship->id }}">
+            <div class="cell">
+               <h1 class="scholarships-h1">
+                     {{ $scholarship->name }}
+               </h1>
 
-         <h1 class="scholarships-h1">
-            <a href="/scholarships/{{$scholarship->id }}">
-               {{ $scholarship->name }}
-            </a>
-         </h1>
+               <div class="scholarship-icons">
+                  <div class="iconandinfo">
+                     <span class="material-symbols-outlined">
+                        event
+                     </span>
+                     <span class="scholarshiplistinfo1">{{$scholarship->deadline}}</span>
+                  </div>
 
-         <div class="scholarship-icons">
-            <div class="iconandinfo">
-               <span class="material-symbols-outlined">
-                  event
-               </span>
-               <span class = "scholarshiplistinfo1">{{$scholarship->deadline}}</span>
+                  <div class="iconandinfo2">
+                     <span class="material-symbols-outlined">
+                        attach_money
+                     </span>
+                     <span class="scholarshiplistinfo">{{$scholarship->amount}}</span>
+                  </div>
+               </div>
+
+               <div>
+                  @foreach ($scholarship->tags as $tag)
+                  <button class="pill" type="button">
+                     <span class="tagname">{{$tag->name}}</span>
+                  </button>
+                  @endforeach
+               </div>
+
+               <br>
+
+               <span class="btn">
+                  Learn More
+               <span>
             </div>
-
-            <div class = "iconandinfo2">
-               <span class="material-symbols-outlined">
-                  attach_money
-               </span>
-               <span class = "scholarshiplistinfo">{{$scholarship->amount}}</span>
-            </div>
-         </div>
-
-         <div>
-            @foreach ($scholarship->tags as $tag)
-            <button class="pill" type="button">
-               <span class="tagname">{{$tag->name}}</span>
-            </button>
-            @endforeach
-         </div>
-
-         <br>
-
-       <!--  <a href="/scholarships/{{$scholarship->id}}" class="btn">
-            Learn More
-         </a> -->
+         </a>
       </article>
+
 
       @empty
       <div class="empty">No scholarships found.</div>
       @endforelse
 
    </div>
-
 
 
    <!-- Javascript for tags filter-->

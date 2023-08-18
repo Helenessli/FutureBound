@@ -5,7 +5,7 @@
 <div class="heading3">
     <p class="tiny">Add</p>
     <h2>Add a Scholarship</h2>
-    <p class="description1">Find your next scholarship through our handpicked database to fund your <span style="color: #652dcb; font-weight: 600;">high school</span> and <span style="color: #652dcb; font-weight: 600;">post-secondary</span> journey.</p>
+    <p class="description2">Submit a scholarship for it to be added to our comprehensive list.   Please note that the reviewing process might take up to <span style="color: #652dcb; font-weight: 600;">three business days</span>.</p>
 
 
     <div class="scholarship form">
@@ -14,39 +14,39 @@
             <div class="formBox">
                 <div class="row50">
                     <div class="inputBox">
-                        <span>Name</span>
+                        <span class="addheading">Name</span>
                         <input id="name" name="name" type="text" placeholder="Fullbright Scholarship" required>
                     </div>
                     <div class="inputBox">
-                        <span>Amount</span>
+                        <span class="addheading">Amount</span>
                         <input id="amount" name="amount" type="text" placeholder="$1000" required>
                     </div>
                 </div>
 
                 <div class="row50">
                     <div class="inputBox">
-                        <span>Deadline</span>
+                        <span class="addheading">Deadline</span>
                         <input id="deadline" name="deadline" type="text" placeholder="Jan 1, 2023" required>
                     </div>
                     <div class="inputBox">
-                        <span>URL</span>
+                        <span class="addheading">URL</span>
                         <input id="url" name="url" type="text" placeholder="www.fullbright.com" required>
                     </div>
                 </div>
 
                 <div class="row100">
                     <div class="inputBox">
-                        <span>Criteria</span>
+                        <span class="addheading">Criteria</span>
                         <textarea placeholder="Elibigility, special requirements, etc..." id="criteria" name="criteria" required></textarea>
                     </div>
                 </div>
 
                 <div class="row100">
-                    <div class="inputBox">
-                        <input type="submit" value="Submit">
+                    <div>
+                        <button type="submit" class="btn">Submit</button>
                     </div>
                     @if(session('flash'))
-                    <p><strong>{{ session('flash') }}</strong></p>
+                    <p class="flash">{{ session('flash') }}</p>
                     @endif
                 </div>
             </div>
