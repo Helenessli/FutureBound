@@ -4,7 +4,7 @@
 <div class="heading2">
    <p class="tiny">Scholarships</p>
    <h2>Scholarships</h2>
-   <p class="description1">Find your next scholarship through our handpicked database to fund your <span style="color: #652dcb; font-weight: 600;">high school</span> and <span style="color: #652dcb; font-weight: 600;">post-secondary</span> journey.</p>
+   <p class="description1">Find your next scholarship through our handpicked database designed for graduating <span style="color: #652dcb; font-weight: 600;">high school</span> students.</p>
    <form action="{{ route('scholarships') }}" method="GET">
 
       <!-- Search box -->

@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
          ]);
 
          Scholarship::create([
-            'name' => 'James Lee Foundation Scholarship ',
+            'name' => 'James Lee Foundation Scholarship',
             'amount' => '5,000',
             'criteria' => 'Open to emerging creative talent from across Canada wanting to enter the advertising industry. Entrants must be non-professional Canadian residents over 16. All fields of creativity related to advertising considered (writers, art directors, film makers, recording artists, illustrators, digital artists, etc.). Scholarship awarded on the basis of the portfolio that demonstrates the most original thinking and craftsmanship according to the judging panel.',
             'deadline' => '2023-09-15',
